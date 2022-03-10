@@ -93,7 +93,7 @@ if __name__ == '__main__':
             time.sleep(5)
 
         elif "weather" in statement:
-            api_key = "7e7c1f0e94a0f88363b4a92203c20f60"
+            api_key = ""
             base_url = "https://api.openweathermap.org/data/2.5/weather?"
             speak("whats the city name")
             city_name = takeCommand()
@@ -153,8 +153,8 @@ if __name__ == '__main__':
         elif 'ask' in statement:
             speak('I can answer to computational and geographical questions and what question do you want to ask now')
             question = takeCommand()
-            app_id = "WKV645-PE6XL6URPQ"
-            client = wolframalpha.Client('WKV645-PE6XL6URPQ')
+            app_id = ""
+            client = wolframalpha.Client(app_id)
             res = client.query(question)
             answer = next(res.results).text
             speak(answer)
