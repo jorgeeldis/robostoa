@@ -43,6 +43,11 @@ RoboStoa is an AI robot, powered by a Raspberry Pi/Arduino, it has a bluetooth s
 *   pip install json <br/>
 *   pip install os <br/>
 
+## Getting Started
+You'll need to use two api's keys in order for Robostoa to work properly...
+*   [OpenWeatherMap](https://openweathermap.org/appid): API for weather forecast.
+*   [WolframAlpha](https://developer.wolframalpha.com/portal/myapps/): API for answer questions.
+
 ## Meta
 
 Jorge Eldis ~ [@jorgeeldis](https://twitter.com/jorgeeldis) ~ jorgeeldisg30@gmail.com
