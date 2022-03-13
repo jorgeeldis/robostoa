@@ -31,17 +31,17 @@ RoboStoa is an AI robot, powered by a Raspberry Pi/Arduino, it has a bluetooth s
 
 ## Development setup
 
-pip install SpeechRecognition <br/>
-pip install pyttsx3 <br/>
-pip install datetime <br/>
-pip install wikipedia <br/>
-pip install webbrowser <br/>
-pip install time <br/>
-pip install subprocess <br/>
-pip install wolframalpha <br/>
-pip install requests <br/>
-pip install json <br/>
-pip install os <br/>
+*   pip install SpeechRecognition <br/>
+*   pip install pyttsx3 <br/>
+*   pip install datetime <br/>
+*   pip install wikipedia <br/>
+*   pip install webbrowser <br/>
+*   pip install time <br/>
+*   pip install subprocess <br/>
+*   pip install wolframalpha <br/>
+*   pip install requests <br/>
+*   pip install json <br/>
+*   pip install os <br/>
 
 ## Meta
 
