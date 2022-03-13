@@ -9,8 +9,8 @@ RoboStoa is an AI robot, powered by a Raspberry Pi/Arduino, it has a bluetooth s
 
 ## Requirements
 
-* Python Version: **3.8.x**
-* Operation system: **Windows 10**
+*   Python Version: **3.8.x**
+*   Operation system: **Windows 10**
 
 ## Skills
 *   **Set an alarm** (e.g 'Please set an alarm' or 'Place an alarm please')
