@@ -5,7 +5,7 @@
 RoboStoa is an AI robot, powered by a Raspberry Pi/Arduino, it has a bluetooth speaker integrated and a 8x8 matrix screen, it's a Prototype, but still needs a lot of upgrades, like some wheels/support, LCD Screen, a special program that can answer to your voice, & much more. I will also make different versions, for example with different versions of arduino, or maybe another microcontoller. The absolute goal is to sell this item and be one of the most useful AI Robots in the market.
 
  
-![header](https://raw.githubusercontent.com/jorgeeldis/robostoa/main/robostoa.png)
+![header](https://raw.githubusercontent.com/jorgeeldis/robostoa/main/robostoaheader.png)
 
 ## Development setup
 
