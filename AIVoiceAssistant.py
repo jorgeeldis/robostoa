@@ -20,6 +20,7 @@ engine = pyttsx3.init('sapi5')
 voices = engine.getProperty('voices')
 engine.setProperty('voice', 'voices[0].id')
 
+
 def alarm(h, m, s):
 
     # Calculate the total number of seconds
@@ -43,6 +44,7 @@ def alarm(h, m, s):
 
     print("Bzzzt! The countdown is at zero seconds!")
     beepy.beep(5)
+
 
 def speak(text):
     engine.say(text)
@@ -72,7 +74,7 @@ def takeCommand():
 
         try:
             statement = r.recognize_google(audio, language='en-in')
-            print(f"User said: {statement}\n")
+            print(f"User said: {statement}")
 
         except Exception as e:
             speak("Excuse me, can you say that again")
@@ -112,22 +114,26 @@ if __name__ == '__main__':
         elif 'open youtube' in statement:
             webbrowser.open_new_tab("https://www.youtube.com")
             speak("Youtube is open now")
+            print("Youtube is open now")
             time.sleep(5)
 
         elif 'open google' in statement:
             webbrowser.open_new_tab("https://www.google.com")
             speak("Google is open now")
+            print("Google is open now")
             time.sleep(5)
 
         elif 'open gmail' in statement:
             webbrowser.open_new_tab("https://gmail.com")
             speak("G Mail is open now")
+            print("GMail is open now")
             time.sleep(5)
 
         elif "weather" in statement:
             api_key = "7e7c1f0e94a0f88363b4a92203c20f60"
             base_url = "https://api.openweathermap.org/data/2.5/weather?"
             speak("whats the city name")
+            print("What is the city name?")
             city_name = takeCommand()
             complete_url = base_url+"appid="+api_key+"&q="+city_name
             response = requests.get(complete_url)
@@ -153,13 +159,18 @@ if __name__ == '__main__':
 
             else:
                 speak(" City Not Found ")
+                print("City not found")
 
         elif 'time' in statement:
             strTime = datetime.datetime.now().strftime("%H:%M:%S")
             speak(f"the time is {strTime}")
+            print(f"The time is {strTime}")
 
         elif 'who are you' in statement or 'what can you do' in statement:
             speak('I am Robostoa, the best AI Robot you will ever find. For now i am programmed to do tasks like'
+                  'opening youtube, google, gmail and stackoverflow, play some songs for you, predict forecast, and weather in different cities, search in wikipedia, tell you a joke,'
+                  'get the top headline news from new york times and you can ask me computational or geographical questions too!')
+            print('I am Robostoa, the best AI Robot you will ever find. For now i am programmed to do tasks like'
                   'opening youtube, google, gmail and stackoverflow, play some songs for you, predict forecast, and weather in different cities, search in wikipedia, tell you a joke,'
                   'get the top headline news from new york times and you can ask me computational or geographical questions too!')
 
@@ -169,21 +180,30 @@ if __name__ == '__main__':
 
         elif "open stackoverflow" in statement:
             webbrowser.open_new_tab("https://stackoverflow.com/login")
-            speak("Here is stackoverflow")
+            speak("Here is stack overflow")
+            print("Here is Stack Overflow")
 
         elif 'news' in statement:
             news = webbrowser.open_new_tab(
                 "https://www.nytimes.com/")
             speak('Here are some headlines from the New York Times')
+            print('Here are some headlines from the New York Times')
             time.sleep(6)
 
-        elif 'search' in statement:
-            statement = statement.replace("search", "")
-            webbrowser.open_new_tab(statement)
-            time.sleep(5)
-
-        elif 'calculate' in statement:
-            speak('I can answer to computational and geographical questions, what question do you want to ask now?')
+        elif 'calculate' in statement or 'calculate something' in statement:
+            speak('I can answer to computational questions, what question do you want to ask now?')
+            print('I can answer to computational questions, what question do you want to ask now?')
+            question = takeCommand()
+            app_id = "WKV645-PE6XL6URPQ"
+            client = wolframalpha.Client(app_id)
+            res = client.query(question)
+            answer = next(res.results).text
+            speak(answer)
+            print(answer)
+            
+        elif 'geographical questions' in statement:
+            speak('I can answer to geographical questions, what question do you want to ask now?')
+            print('I can answer to geographical questions, what question do you want to ask now?')
             question = takeCommand()
             app_id = "WKV645-PE6XL6URPQ"
             client = wolframalpha.Client(app_id)
@@ -195,14 +215,18 @@ if __name__ == '__main__':
         elif "log off" in statement or "sign out" in statement:
             speak(
                 "Ok , your pc will log off in 10 sec make sure you exit from all applications")
+            print(
+                "Ok , your pc will log off in 10 sec make sure you exit from all applications")
             subprocess.call(["shutdown", "/l"])
 
-        elif 'joke' in statement:
-            speak(pyjokes.get_joke())
+        elif 'joke' in statement or "make me happy" in statement:
+            joke = speak(pyjokes.get_joke())
+            print(joke)
 
         elif 'play' in statement:
             song = statement.replace('play', '')
             speak('playing ' + song)
+            print("Playing " + song)
             pywhatkit.playonyt(song)
 
         elif 'volume up' in statement:
@@ -218,14 +242,25 @@ if __name__ == '__main__':
             npath = "C:\\Windows\\system32\\notepad.exe"
             os.startfile(npath)
             speak('Opening notepad for you')
+            print('Opening notepad for you')
+            
+        elif "open calculator" in statement:
+            npath = "C:\\Windows\\system32\\calc.exe"
+            os.startfile(npath)
+            speak('Opening notepad for you')
+            print('Opening notepad for you')
 
         elif "alarm" in statement:
             speak('Please tell me how long do you want this alarm to be: ')
+            print('Please tell me how long do you want this alarm to be: ')
             speak('Please specify hours: ')
+            print('Please specify hours: ')
             h = takeCommand()
             speak('Please specify minutes: ')
+            print('Please specify minutes: ')
             m = takeCommand()
             speak('Please specify seconds: ')
+            print('Please specify seconds: ')
             s = takeCommand()
             alarm(int(h), int(m), int(s))
 
