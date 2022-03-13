@@ -1,4 +1,4 @@
-# Robostoa
+# Robostoa 🧠
 
 > Robostoa is an AI voice assistant robot powered by a raspberry pi + arduino that helps you in your daily tasks.
 
@@ -6,6 +6,28 @@ RoboStoa is an AI robot, powered by a Raspberry Pi/Arduino, it has a bluetooth s
 
  
 ![header](https://raw.githubusercontent.com/jorgeeldis/robostoa/main/robostoaheader.png)
+
+## Requirements
+
+* Python Version: **3.8.x**
+* Operation system: **Windows 10**
+
+## Skills
+*   **Set an alarm** (e.g 'Please set an alarm' or 'Place an alarm please')
+*   **Search for something specific** (e.g 'Tell me about...')
+*   **Open any website you like** (e.g 'Please open youtube' or 'Open google')
+*   **Predicts the weather and humidity** (e.g 'What's the weather like?' or 'Tell me the weather')
+*   **Tells you the time** (e.g 'What time it is?' or 'Tell me the time')
+*   **Gives you complete list of skills he can do.** (e.g 'Who are you?' or 'What can you do?')
+*   **Gives you the headline news** (e.g 'What are the news?' or 'Are there any news today?')
+*   **Calculates almost everything** (e.g 'Calculate something for me' or 'Calculate...')
+*   **Answer to geographical questions** (e.g 'I have a geographical question' or 'Geographical question...')
+*   **Can automatically log off your pc** (e.g 'Please log off' or 'Sign out for me')
+*   **Tells you a new funny joke** (e.g 'Tell me a joke' or 'Make me happy')
+*   **Play any song you like from youtube** (e.g 'Play Bon Jovi' or 'Play Livin on a Prayer')
+*   **Controls volume up/down** (e.g 'Volume up' or 'Volume Down')
+*   **Mute the entire PC** (e.g 'Volume mute' or 'Shut up')
+*   **Open windows programs** (e.g 'Open notepad' or 'Open calculator')
 
 ## Development setup
 
